@@ -1,0 +1,90 @@
+@import './common.scss';
+
+
+
+.jumbotron {
+    background-color: $main-color;
+    border-radius: 0;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    color: white;
+
+    /* The image used */
+    background-image: url("../assets/main-jumbo.png");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.values .card .card-title,
+.values .card p {
+    text-align: center;
+}
+
+.values {
+    position: relative;
+    bottom: 7em;
+    margin-bottom: -2em;
+}
+
+.values .card {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.center-content {
+    .title {
+        text-align: center;
+    }
+
+    text-align: center;
+}
+
+.icon {
+    text-align: center;
+    margin-top: 2.5em;
+
+    i {
+        color: $main-color;
+        font-size: 2em;
+    }
+
+    p {
+        margin-top: 1em;
+    }
+}
+
+.list {
+    display: flex;
+
+    i {
+        padding: 0 1em;
+        position: relative;
+        top: 5px;
+    }
+}
+
+.top-content {
+    padding-bottom: 5em;
+}
+
+.content {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.content.colored {
+    background-color: $main-color;
+    color: white;
+
+    .title {
+        color: white;
+    }
+
+    .list i {
+        color: white;
+    }
+}
