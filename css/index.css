@@ -156,7 +156,7 @@ h6 {
         height: 100px; } }
 
 .center-content {
-  text-align: center; }
+  text-align: justify; }
   .center-content .title {
     text-align: center; }
 
@@ -181,7 +181,8 @@ h6 {
 
 .content {
   padding-top: 5em;
-  padding-bottom: 5em; }
+  padding-bottom: 5em;
+  text-align: justify; }
 
 .content.colored {
   background-color: #df3036;
