@@ -23,6 +23,8 @@
     text-align: center;
 }
 
+
+
 .values {
     position: relative;
     bottom: 7em;
@@ -32,6 +34,25 @@
 .values .card {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
+    .card-body {
+        height: 125px;
+    }
+}
+
+@media (max-width: 768px) {
+    .values {
+        position: relative;
+        bottom: 0;
+        margin-bottom: 2em;
+
+        .card {
+            margin-bottom: 2em;
+
+            .card-body {
+                height: 100px;
+            }
+        }
+    }
 }
 
 
@@ -87,4 +108,19 @@
     .list i {
         color: white;
     }
+}
+
+.candidates img {
+    max-width: 120px;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+}
+
+.candidates .image-container {
+    text-align: center;
+}
+
+.candidates {
+    padding-bottom: 4em;
 }

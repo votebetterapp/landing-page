@@ -26,10 +26,36 @@ nav.navbar {
    
 }
 
+.mobile-logo {
+    display: none;
+}
+
 .nav-scrolled .navbar-nav a {
     color: $main-color !important;
 }
 
+nav img.mobile-logo {
+    height: 40px;
+}
+
+@media (max-width: 992px) {
+
+    nav.navbar {
+        background-color: white;
+        color: $main-color;
+        .navbar-nav a,
+        .navbar-toggler-icon {
+            color:  $main-color;
+        }
+    }
+    .mobile-logo {
+        display: initial;
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+}
 
 nav img.logo {
     height: 40px;
@@ -37,6 +63,17 @@ nav img.logo {
 
 nav img.red {
     display: none;
+}
+
+nav .navbar-toggler-icon i {
+    position:relative;
+    top: 3px;
+}
+
+nav.nav-scrolled .navbar-toggler-icon i {
+    color: $main-color;
+    position:relative;
+    top: 3px;
 }
 
 

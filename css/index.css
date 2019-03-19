@@ -18,14 +18,41 @@ nav.navbar {
   background-color: white !important;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3); }
 
+.mobile-logo {
+  display: none; }
+
 .nav-scrolled .navbar-nav a {
   color: #df3036 !important; }
+
+nav img.mobile-logo {
+  height: 40px; }
+
+@media (max-width: 992px) {
+  nav.navbar {
+    background-color: white;
+    color: #df3036; }
+    nav.navbar .navbar-nav a,
+    nav.navbar .navbar-toggler-icon {
+      color: #df3036; }
+  .mobile-logo {
+    display: initial; }
+  .mobile-hidden {
+    display: none !important; } }
 
 nav img.logo {
   height: 40px; }
 
 nav img.red {
   display: none; }
+
+nav .navbar-toggler-icon i {
+  position: relative;
+  top: 3px; }
+
+nav.nav-scrolled .navbar-toggler-icon i {
+  color: #df3036;
+  position: relative;
+  top: 3px; }
 
 /******** COMMON STYLES & MEDIA QUERIES ****/
 html,
@@ -115,6 +142,18 @@ h6 {
 .values .card {
   background-color: rgba(0, 0, 0, 0);
   border: 0; }
+  .values .card .card-body {
+    height: 125px; }
+
+@media (max-width: 768px) {
+  .values {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 2em; }
+    .values .card {
+      margin-bottom: 2em; }
+      .values .card .card-body {
+        height: 100px; } }
 
 .center-content {
   text-align: center; }
@@ -151,3 +190,15 @@ h6 {
     color: white; }
   .content.colored .list i {
     color: white; }
+
+.candidates img {
+  max-width: 120px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5); }
+
+.candidates .image-container {
+  text-align: center; }
+
+.candidates {
+  padding-bottom: 4em; }
