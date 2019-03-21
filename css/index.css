@@ -12,7 +12,8 @@ nav.navbar {
     color: white;
     -webkit-transition: color 0.5s;
     /* Safari */
-    transition: color 0.5s; }
+    transition: color 0.5s;
+    font-weight: 500; }
 
 .nav-scrolled {
   background-color: white !important;
@@ -54,10 +55,13 @@ nav.nav-scrolled .navbar-toggler-icon i {
   position: relative;
   top: 3px; }
 
+.text-centered {
+  text-align: center; }
+
 /******** COMMON STYLES & MEDIA QUERIES ****/
 html,
 body {
-  font-size: 14px !important; }
+  font-size: 12px !important; }
 
 h1 {
   font-size: 1.5em; }
@@ -110,12 +114,16 @@ h6 {
 @media (min-width: 62em) {
   html,
   body {
-    font-size: 16px !important; } }
+    font-size: 13px !important; } }
 
 @media (min-width: 75em) {
   html,
   body {
-    font-size: 18px !important; } }
+    font-size: 14px !important; } }
+
+body {
+  background-color: white !important;
+  color: black; }
 
 .jumbotron {
   background-color: #df3036;
@@ -129,6 +137,15 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  .jumbotron .button-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2.5em; }
+    .jumbotron .button-container button {
+      font-size: 1.2em;
+      font-weight: 500;
+      padding: 0.755em 1.5em; }
 
 .values .card .card-title,
 .values .card p {
@@ -165,9 +182,12 @@ h6 {
   margin-top: 2.5em; }
   .icon i {
     color: #df3036;
-    font-size: 2em; }
+    font-size: 3em; }
   .icon p {
     margin-top: 1em; }
+
+.colored .icon i {
+  color: white; }
 
 .list {
   display: flex; }
@@ -177,19 +197,25 @@ h6 {
     top: 5px; }
 
 .top-content {
-  padding-bottom: 5em; }
-
-.content {
-  padding-top: 5em;
   padding-bottom: 5em;
   text-align: justify; }
 
-.content.colored {
+.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: justify; }
+  .content .image {
+    padding: 0 4em; }
+
+.content.colored,
+.center-content.colored {
   background-color: #df3036;
   color: white; }
-  .content.colored .title {
+  .content.colored .title,
+  .center-content.colored .title {
     color: white; }
-  .content.colored .list i {
+  .content.colored .list i,
+  .center-content.colored .list i {
     color: white; }
 
 .candidates img {
@@ -203,3 +229,25 @@ h6 {
 
 .candidates {
   padding-bottom: 4em; }
+
+.carousel .carousel-inner h6 {
+  color: white; }
+
+#footer {
+  background-color: #2e3732;
+  color: white;
+  padding: 0.25em 0;
+  margin-top: -1px; }
+  #footer img {
+    width: 200px; }
+  #footer a {
+    color: white;
+    padding: 1em; }
+
+.modal .modal-content {
+  background-color: white; }
+
+@media (max-width: 576px) {
+  .image-container {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; } }

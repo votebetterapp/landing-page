@@ -17,6 +17,7 @@ nav.navbar {
         -webkit-transition: color 0.5s;
         /* Safari */
         transition: color 0.5s;
+        font-weight: 500;
     }
 }
 
@@ -76,12 +77,16 @@ nav.nav-scrolled .navbar-toggler-icon i {
     top: 3px;
 }
 
+.text-centered {
+    text-align: center;
+}
+
 
 /******** COMMON STYLES & MEDIA QUERIES ****/
 
 html,
 body {
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 
 h1 {
@@ -162,7 +167,7 @@ h6 {
 
     html,
     body {
-        font-size: 16px !important;
+        font-size: 13px !important;
     }
 }
 
@@ -170,6 +175,6 @@ h6 {
 
     html,
     body {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
 }
