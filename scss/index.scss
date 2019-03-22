@@ -1,196 +1,203 @@
 @import './common.scss';
 
 body {
-    background-color: white !important;
-    color: black;
+  background-color: white !important;
+  color: black;
 }
 
 .jumbotron {
-    background-color: $main-color;
-    border-radius: 0;
-    padding-top: 10em;
-    padding-bottom: 10em;
-    color: white;
+  background-color: $main-color;
+  border-radius: 0;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  color: white;
 
-    /* The image used */
-    background-image: url("../assets/main-jumbo.png");
+  /* The image used */
+  background-image: url('../assets/main-jumbo.png');
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    .button-container {
-        width: 100%;
-        text-align: center;
-        padding-bottom: 1em;
-        padding-top: 2.5em;
+  .button-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2.5em;
 
-        button {
-            font-size: 1.2em;
-            font-weight: 500;
-            padding: 0.755em 1.5em;
-        }
+    button {
+      font-size: 1.2em;
+      font-weight: 500;
+      padding: 0.755em 1.5em;
     }
+  }
 }
 
 .values .card .card-title,
 .values .card p {
-    text-align: center;
+  text-align: center;
 }
 
-
-
 .values {
-    position: relative;
-    bottom: 7em;
-    margin-bottom: -2em;
+  position: relative;
+  bottom: 7em;
+  margin-bottom: -2em;
 }
 
 .values .card {
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
 
-    .card-body {
-        height: 125px;
-    }
+  .card-body {
+    height: 125px;
+  }
 }
 
 @media (max-width: 768px) {
-    .values {
-        position: relative;
-        bottom: 0;
-        margin-bottom: 2em;
+  .values {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 2em;
 
-        .card {
-            margin-bottom: 2em;
+    .card {
+      margin-bottom: 2em;
 
-            .card-body {
-                height: 100px;
-            }
-        }
+      .card-body {
+        height: 100px;
+      }
     }
+  }
 }
 
-
 .center-content {
-    .title {
-        text-align: center;
-    }
+  .title {
+    text-align: center;
+  }
 
-    text-align: justify;
+  text-align: justify;
 }
 
 .icon {
-    text-align: center;
-    margin-top: 2.5em;
+  text-align: center;
+  margin-top: 2.5em;
 
-    i {
-        color: $main-color;
-        font-size: 3em;
-    }
+  i {
+    color: $main-color;
+    font-size: 3em;
+  }
 
-    p {
-        margin-top: 1em;
-    }
+  p {
+    margin-top: 1em;
+  }
 }
 
 .colored {
-    .icon i {
-        color: white;
-    }
+  .icon i {
+    color: white;
+  }
 }
 
 .list {
-    display: flex;
+  display: flex;
 
-    i {
-        padding: 0 1em;
-        position: relative;
-        top: 5px;
-    }
+  i {
+    padding: 0 1em;
+    position: relative;
+    top: 5px;
+  }
 }
 
 .top-content {
-    padding-bottom: 5em;
-    text-align: justify
+  padding-bottom: 5em;
+  text-align: justify;
 }
 
 .content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: justify;
-    .image {
-        padding: 0 4em;
-    }
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: justify;
+  .image {
+    padding: 0 4em;
+  }
 }
 
-.content.colored, 
+.content.colored,
 .center-content.colored {
-    background-color: $main-color;
+  background-color: $main-color;
+  color: white;
+
+  .title {
     color: white;
+  }
 
-    .title {
-        color: white;
-    }
-
-    .list i {
-        color: white;
-    }
+  .list i {
+    color: white;
+  }
 }
 
 .candidates img {
-    max-width: 120px;
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  max-width: 120px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
 .candidates .image-container {
-    text-align: center;
+  text-align: center;
 }
 
 .candidates {
-    padding-bottom: 4em;
+  padding-bottom: 4em;
 }
-
 
 .carousel .carousel-inner h6 {
-    color: white;
+  color: white;
 }
 
-
 #footer {
-    //background-color: #9e0309;
-    // background-color: #0c0b0b;
-    background-color: #2e3732;
+  //background-color: #9e0309;
+  // background-color: #0c0b0b;
+  background-color: #2e3732;
+  color: white;
+  padding: 0.25em 0;
+  margin-top: -1px;
+
+  img {
+    width: 200px;
+  }
+
+  a {
     color: white;
-    padding: 0.25em 0;
-    margin-top: -1px;
-
-    img {
-        width: 200px;
-    }
-
-    a {
-        color: white;
-        padding: 1em;
-    }
+    padding: 1em;
+  }
 }
 
 .modal .modal-content {
-    background-color: white;
+  background-color: white;
 }
 
-#survey iframe{
-    max-height: calc(100vh - 85px);
-    height: 1000px;
-    width: 100%;
+.modal {
+  .modal-dialog,
+  .modal-content {
+    width: 700px;
+    max-width: calc(100vw - 15px);
+  }
+  .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#survey iframe {
+  max-height: calc(100vh - 85px);
+  height: 1000px;
+  width: 100%;
 }
 
 @media (max-width: 576px) {
-    .image-container {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
+  .image-container {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }

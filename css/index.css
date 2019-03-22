@@ -247,6 +247,15 @@ body {
 .modal .modal-content {
   background-color: white; }
 
+.modal .modal-dialog,
+.modal .modal-content {
+  width: 700px;
+  max-width: calc(100vw - 15px); }
+
+.modal .modal-body {
+  padding-left: 0;
+  padding-right: 0; }
+
 #survey iframe {
   max-height: calc(100vh - 85px);
   height: 1000px;

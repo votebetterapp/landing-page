@@ -10,6 +10,14 @@ $(document).ready(function () {
             $(".logo.white").show();
             $(".logo.red").hide();
         }
-        console.log($height);
     });
+
+    var e = document.getElementById("surveyFrame");
+    if (e != null) {
+        alert(e.contentWindow.document.body.innerHTML);
+    }
+    console.log(e);
+
+    var f = $("#surveyFrame").contents().find("body").html();
+    console.log(f);
 });
