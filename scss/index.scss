@@ -182,6 +182,12 @@ body {
     background-color: white;
 }
 
+#survey iframe{
+    max-height: calc(100vh - 85px);
+    height: 1000px;
+    width: 100%;
+}
+
 @media (max-width: 576px) {
     .image-container {
         margin-top: 0.5em;
