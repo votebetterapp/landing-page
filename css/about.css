@@ -181,3 +181,7 @@ h6 {
       color: #0077b5; }
     .about-us .social .fa-globe {
       color: gray; }
+
+@media (max-width: 768px) {
+  .about-us .image {
+    margin-top: 2em; } }
