@@ -325,3 +325,42 @@ body {
     align-self: center; }
   .testimonial-text .end {
     text-align: right; } }
+
+.embed-container {
+  border: 15px solid #2f2f2f;
+  margin-top: 20px;
+  border-radius: 10px; }
+  .embed-container .embed {
+    background-color: gray; }
+    .embed-container .embed iframe {
+      margin-top: 10px; }
+  .embed-container .red-circle {
+    height: 10px;
+    width: 10px;
+    z-index: 100;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: 10px;
+    background-color: #fb5a52; }
+  .embed-container .yellow-circle {
+    height: 10px;
+    width: 10px;
+    z-index: 100;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: 15px;
+    background-color: #ffba2b; }
+  .embed-container .green-circle {
+    height: 10px;
+    width: 10px;
+    z-index: 100;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    top: 5px;
+    left: 20px;
+    background-color: #28c941; }
