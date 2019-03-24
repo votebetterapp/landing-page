@@ -10,5 +10,8 @@ $(document).ready(function () {
             $(".logo.white").show();
             $(".logo.red").hide();
         }
+
+        var date = new Date();
+        $('#currentYear').text(date.getFullYear());
     });
 });
