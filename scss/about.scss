@@ -1,0 +1,65 @@
+@import './common.scss';
+
+.jumbotron {
+    background-color: $main-color;
+    border-radius: 0;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    color: white;
+
+    /* The image used */
+    background-image: url('../assets/main-jumbo.png');
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-top: 2.5em;
+
+        button {
+            font-size: 1.2em;
+            font-weight: 500;
+            padding: 0.755em 1.5em;
+        }
+    }
+}
+
+.container-title {
+    color: $main-color;
+    font-weight: bold;
+    margin-bottom: 2em ;
+}
+
+.about-us {
+    text-align: center;
+    margin: 2em 0;
+    .image {
+        border-radius: 50%;
+        height: 150px;
+    }
+    .name {
+        color: $main-color;
+        margin-top: 1em;
+    }
+    .title {
+        font-weight:500;
+    }
+
+    .social {
+        font-size: 2em;
+        .fa {
+            padding: 0 5px;
+        }
+        .fa-linkedin-square {
+            color: #0077b5;
+        }
+        .fa-globe {
+            color: gray;
+        }
+    }
+}
