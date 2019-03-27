@@ -30,7 +30,7 @@ body {
     padding-bottom: 1em;
     padding-top: 2.5em;
 
-    button {
+    a {
       font-size: 1.2em;
       font-weight: 500;
       padding: 0.755em 1.5em;
@@ -117,9 +117,18 @@ body {
   text-align: justify;
 }
 
-.content {
+.content:not(.laptop) {
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: justify;
+  .image {
+    padding: 0 4em;
+  }
+}
+
+.content{
+  padding-top: 70px;
+  padding-bottom: 70px;
   text-align: justify;
   .image {
     padding: 0 4em;
@@ -197,7 +206,7 @@ body {
       width: 150px;
       border-radius: 50%;
       margin-left: 20px;
-      margin-bottom: 1em
+      margin-bottom: 1em;
     }
     .name {
       padding-left: 20px;
@@ -209,7 +218,7 @@ body {
   }
 
   .right {
-    padding: 0 2em; 
+    padding: 0 2em;
   }
 }
 
@@ -217,8 +226,25 @@ body {
   margin-bottom: 0;
 }
 
+.content:not(.colored) .feature-card {
+  box-shadow: 2px 3px 4px #8b8b8b;
+  padding: 1em;
+  border: 1px solid #cfcece;
+  .title {
+    color: $main-color;
+    font-weight: 500;
+  }
+}
 
-
+.content.colored .feature-card {
+  box-shadow: 2px 3px 4px #9b282c;
+  padding: 1em;
+  border: 1px solid  #b2262b;
+  background-color: #b2262b;
+  .title {
+    font-weight: 500;
+  }
+}
 
 .testimonial-text {
   height: 150px;
@@ -227,15 +253,14 @@ body {
     align-self: flex-start;
   }
   .center {
-    align-self : center;
+    align-self: center;
   }
   .end {
     align-self: flex-end;
   }
 }
 
-
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .carousel-item .row {
     display: initial;
     align-items: center;
@@ -245,7 +270,7 @@ body {
         width: 150px;
         border-radius: 50%;
         margin-left: 20px;
-        margin-bottom: 1em
+        margin-bottom: 1em;
       }
       .name {
         padding-left: 20px;
@@ -255,30 +280,24 @@ body {
         font-weight: 300;
       }
     }
-  
-    .right {
 
-      padding: 0 2em; 
+    .right {
+      padding: 0 2em;
     }
   }
-  
-  
-  
-  
+
   .testimonial-text {
     .start {
       text-align: left;
     }
     .center {
-      align-self : center;
+      align-self: center;
     }
     .end {
       text-align: right;
     }
   }
-  
 }
-
 
 .embed-container {
   border: 15px solid #2f2f2f;
@@ -325,5 +344,4 @@ body {
     left: 20px;
     background-color: #28c941;
   }
-
 }

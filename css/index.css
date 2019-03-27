@@ -78,7 +78,7 @@ body {
   font-size: 12px !important; }
 
 h1 {
-  font-size: 1.5em; }
+  font-size: 1.75em; }
 
 h2 {
   font-size: 1.424em; }
@@ -109,7 +109,7 @@ h6 {
 
 @media (min-width: 48em) {
   h1 {
-    font-size: 2em; }
+    font-size: 2.5em; }
   h2 {
     font-size: 1.5em; }
   h3 {
@@ -159,7 +159,7 @@ body {
     text-align: center;
     padding-bottom: 1em;
     padding-top: 2.5em; }
-    .jumbotron .button-container button {
+    .jumbotron .button-container a {
       font-size: 1.2em;
       font-weight: 500;
       padding: 0.755em 1.5em; }
@@ -217,9 +217,16 @@ body {
   padding-bottom: 5em;
   text-align: justify; }
 
-.content {
+.content:not(.laptop) {
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: justify; }
+  .content:not(.laptop) .image {
+    padding: 0 4em; }
+
+.content {
+  padding-top: 70px;
+  padding-bottom: 70px;
   text-align: justify; }
   .content .image {
     padding: 0 4em; }
@@ -291,6 +298,22 @@ body {
 
 .testimonial-container {
   margin-bottom: 0; }
+
+.content:not(.colored) .feature-card {
+  box-shadow: 2px 3px 4px #8b8b8b;
+  padding: 1em;
+  border: 1px solid #cfcece; }
+  .content:not(.colored) .feature-card .title {
+    color: #df3036;
+    font-weight: 500; }
+
+.content.colored .feature-card {
+  box-shadow: 2px 3px 4px #9b282c;
+  padding: 1em;
+  border: 1px solid  #b2262b;
+  background-color: #b2262b; }
+  .content.colored .feature-card .title {
+    font-weight: 500; }
 
 .testimonial-text {
   height: 150px;
