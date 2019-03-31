@@ -17,7 +17,7 @@ nav.navbar {
         -webkit-transition: color 0.5s;
         /* Safari */
         transition: color 0.5s;
-        font-weight: 500;
+        font-weight: 400;
     }
 }
 
@@ -71,6 +71,10 @@ nav .navbar-toggler-icon i {
     top: 3px;
 }
 
+nav .navbar-nav .nav-item .active {
+    font-weight: bold;
+}
+
 nav.nav-scrolled .navbar-toggler-icon i {
     color: $main-color;
     position:relative;
@@ -80,6 +84,26 @@ nav.nav-scrolled .navbar-toggler-icon i {
 .text-centered {
     text-align: center;
 }
+
+
+#footer {
+    //background-color: #9e0309;
+    // background-color: #0c0b0b;
+    background-color: #2e3732;
+    color: white;
+    padding: 0.25em 0;
+    margin-top: -1px;
+  
+    img {
+      width: 200px;
+    }
+  
+    a {
+      color: white;
+      padding: 1em;
+    }
+  }
+  
 
 
 /******** COMMON STYLES & MEDIA QUERIES ****/
