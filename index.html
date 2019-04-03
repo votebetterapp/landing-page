@@ -647,6 +647,11 @@
     <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
     <script>
         (function () {
+            // Don't do GA beacon on preview branches
+            if (window.location.hostname !== 'votebetter.app') {
+                return;
+            }
+            
             var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
             function uuid() {
                 var uuid = "", i, random;
