@@ -339,7 +339,10 @@
 
     <div class="container content">
         <div class="row vertical-center">
-            <div class='col-md-6 col-sm-12'>
+            <div class="col-md-6 col-sm-12 image order-md-2">
+                <img src="assets/index/profile.png" style="width: 100%">
+            </div>
+            <div class='col-md-6 col-sm-12 order-md-1'>
                 <h2 class="primary-color title">Integrated Social Media Capabilities
                 </h2>
                 <p>Respond to your @s, comments, and replies all in one place. VoteBetter also makes it easy to follow
@@ -369,9 +372,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 image">
-                <img src="assets/index/profile.png" style="width: 100%">
-            </div>
+
         </div>
     </div>
 
@@ -708,10 +709,12 @@
             if (window.location.hostname !== 'votebetter.app') {
                 return;
             }
-            
+
             var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
+
             function uuid() {
-                var uuid = "", i, random;
+                var uuid = "",
+                    i, random;
                 for (i = 0; i < 32; i++) {
                     random = Math.random() * 16 | 0;
                     if (i == 8 || i == 12 || i == 16 || i == 20) {
@@ -731,14 +734,14 @@
             document.addEventListener('DOMContentLoaded', function () {
                 console.info('Starting Google Analytics proxy request...');
                 axios.post(gaProxyUrl, {
-                    cid,
-                    dl: document.location.href,
-                    dr: document.referrer,
-                    ua: navigator.userAgent,
-                    sr: `${window.screen.width}x${window.screen.height}`,
-                    vp: `${window.innerWidth}x${window.innerHeight}`,
-                    ul: window.navigator.language,
-                })
+                        cid,
+                        dl: document.location.href,
+                        dr: document.referrer,
+                        ua: navigator.userAgent,
+                        sr: `${window.screen.width}x${window.screen.height}`,
+                        vp: `${window.innerWidth}x${window.innerHeight}`,
+                        ul: window.navigator.language,
+                    })
                     .then(() => {
                         console.info('...Google Analytics proxy request success.');
                     })
