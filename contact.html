@@ -89,7 +89,7 @@
 
     </div>
 
-    <form name="contact" method="POST" data-netlify="true">
+    <form id="contact-form" name="contact" method="POST" data-netlify="true">
         <p>
             <label>Name: <input type="text" name="name" /></label>
         </p>
@@ -97,10 +97,10 @@
             <label>Email: <input type="email" name="email" /></label>
         </p>
         <p>
-            <label>Subject: <input type="email" name="email" /></label>
+            <label>Subject: <input type="text" name="subject" /></label>
         </p>
         <p>
-            <label>Message: <input type="email" name="email" /></label>
+            <label>Message: <textarea name="message" form="contact-form" cols="30" rows="12">Enter message here...</textarea></label>
         </p>
         <p>
             <button type="submit">Send</button>
