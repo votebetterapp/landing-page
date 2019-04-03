@@ -7,7 +7,8 @@
 
 
     <!-- META TAGS FOR SEO -->
-    <meta name="description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
+    <meta name="description"
+        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
     <meta name="keywords" content="vote, students, politics">
     <meta name="robots" content="NOINDEX,FOLLOW">
     <meta name="format-detection" content="telephone=no">
@@ -17,7 +18,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://votebetter.app/" />
     <meta property="og:image" content="./assets/open-graph/website.PNG" />
-    <meta property="og:description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change." />
+    <meta property="og:description"
+        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change." />
     <meta property="og:site_name" content="Vote Better App" />
 
 
@@ -25,7 +27,8 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@publisher_handle">
     <meta name="twitter:title" content="Vote Better App">
-    <meta name="twitter:description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
+    <meta name="twitter:description"
+        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
     <meta name="keywords" content="vote, students, politics">
     <meta name="twitter:creator" content="@author_handle">
     <meta name="twitter:image" content="./assets/open-graph/website.PNG">
@@ -34,7 +37,8 @@
 
     <title>Vote Better App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -45,12 +49,14 @@
 <body>
 
     <nav class="navbar  navbar-expand-lg  fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
         </button>
         <img class="mobile-logo  " src='./assets/red-logo.png' />
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="./index.html"> <img class="logo white mobile-hidden" src='./assets/white-logo.png' />
+            <a class="navbar-brand" href="./index.html"> <img class="logo white mobile-hidden"
+                    src='./assets/white-logo.png' />
                 <img class="logo red mobile-hidden" src='./assets/red-logo.png' /></a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
@@ -82,8 +88,25 @@
         </div>
 
     </div>
-    
 
+    <form id="contact-form" name="contact" method="POST" data-netlify="true">
+        <p>
+            <label>Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>Subject: <input type="text" name="subject" /></label>
+        </p>
+        <p>
+            <label>Message: <textarea name="message" form="contact-form" cols="30"
+                    rows="12">Enter message here...</textarea></label>
+        </p>
+        <p>
+            <button type="submit">Send</button>
+        </p>
+    </form>
 
     <!-- Footer -->
     <section id="footer">
@@ -115,7 +138,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe id="surveyFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSdY-VL5gSLKbDgNtjeRViVsBJiXS4YQO5FdiCxPyViEydUTEg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <iframe id="surveyFrame"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdY-VL5gSLKbDgNtjeRViVsBJiXS4YQO5FdiCxPyViEydUTEg/viewform?embedded=true"
+                        frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 </div>
 
             </div>
@@ -124,12 +149,68 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <script src="./js/index.js"></script>
     <script src="./js/getYear.js"></script>
+    
+    <!-- GA proxy beaconing -->
+    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+    <script>
+        (function () {
+            // Don't do GA beacon on preview branches
+            if (window.location.hostname !== 'votebetter.app') {
+                return;
+            }
+            
+            var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
+            function uuid() {
+                var uuid = "", i, random;
+                for (i = 0; i < 32; i++) {
+                    random = Math.random() * 16 | 0;
+                    if (i == 8 || i == 12 || i == 16 || i == 20) {
+                        uuid += "-"
+                    }
+                    uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
+                }
+                return uuid;
+            }
+            // Anonymous user identification so GA tracks users and sessions properly
+            var cidKey = 'votebetter.app-cid';
+            var cid = localStorage.getItem(cidKey);
+            if (cid === null) {
+                cid = uuid();
+                localStorage.setItem(cidKey, cid);
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                console.info('Starting Google Analytics proxy request...');
+                axios.post(gaProxyUrl, {
+                    cid,
+                    dl: document.location.href,
+                    dr: document.referrer,
+                    ua: navigator.userAgent,
+                    sr: `${window.screen.width}x${window.screen.height}`,
+                    vp: `${window.innerWidth}x${window.innerHeight}`,
+                    ul: window.navigator.language,
+                })
+                    .then(() => {
+                        console.info('...Google Analytics proxy request success.');
+                    })
+                    .catch(() => {
+                        console.error('...Google Analytics proxy request fail.');
+                    });
+            });
+        })();
+    </script>
+    <!-- /GA proxy beaconing -->
     <!-- Scripts-->
 </body>
 

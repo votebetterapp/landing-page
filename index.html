@@ -84,7 +84,6 @@
                 <div class="button-container">
                     <a class="btn btn-lg btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLSdY-VL5gSLKbDgNtjeRViVsBJiXS4YQO5FdiCxPyViEydUTEg/viewform" target="_blank"> JOIN US</a>
                 </div>
-
             </div>
         </div>
 
@@ -132,7 +131,8 @@
             </div>
             <div class='col-md-6 col-sm-12 order-md-1'>
                 <h2 class="primary-color title">Staying Informed</h2>
-                <p>Brush up on your knowledge of campus politics by accessing important information about the structure, processes, and role of your student organization right in the palm of your hand.
+                <p>Brush up on your knowledge of campus politics by accessing important information about the structure,
+                    processes, and role of your student organization right in the palm of your hand.
                 </p>
                 <div class="list">
                     <i class="fa fa-check primary-color" aria-hidden="true"></i>
@@ -287,7 +287,8 @@
                 </p>
                 <div class="feature-card">
                     <p class="title">For Candidates: </p>
-                    <p>Like you, we know that transparency and accountability are more than just buzzwords. Keep your constituents in-the-know with a tried and true tool for demonstrating political integrity.
+                    <p>Like you, we know that transparency and accountability are more than just buzzwords. Keep your
+                        constituents in-the-know with a tried and true tool for demonstrating political integrity.
                     </p>
                 </div>
 
@@ -347,7 +348,8 @@
                 </p>
                 <div class="feature-card">
                     <p class="title">For Candidates: </p>
-                    <p>This feature that was specifically designed with you in mind, because leadership is more than a title and advocacy doesn’t just happen when you are in office.
+                    <p>This feature that was specifically designed with you in mind, because leadership is more than a
+                        title and advocacy doesn’t just happen when you are in office.
                     </p>
                     <div class="list">
                         <i class="fa fa-check primary-color" aria-hidden="true"></i>
@@ -693,9 +695,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
     <script src="./js/index.js"></script>
 
     <script src="./js/getYear.js"></script>
+
+    <!-- GA proxy beaconing -->
+    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+    <script>
+        (function () {
+            // Don't do GA beacon on preview branches
+            if (window.location.hostname !== 'votebetter.app') {
+                return;
+            }
+            
+            var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
+            function uuid() {
+                var uuid = "", i, random;
+                for (i = 0; i < 32; i++) {
+                    random = Math.random() * 16 | 0;
+                    if (i == 8 || i == 12 || i == 16 || i == 20) {
+                        uuid += "-"
+                    }
+                    uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
+                }
+                return uuid;
+            }
+            // Anonymous user identification so GA tracks users and sessions properly
+            var cidKey = 'votebetter.app-cid';
+            var cid = localStorage.getItem(cidKey);
+            if (cid === null) {
+                cid = uuid();
+                localStorage.setItem(cidKey, cid);
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                console.info('Starting Google Analytics proxy request...');
+                axios.post(gaProxyUrl, {
+                    cid,
+                    dl: document.location.href,
+                    dr: document.referrer,
+                    ua: navigator.userAgent,
+                    sr: `${window.screen.width}x${window.screen.height}`,
+                    vp: `${window.innerWidth}x${window.innerHeight}`,
+                    ul: window.navigator.language,
+                })
+                    .then(() => {
+                        console.info('...Google Analytics proxy request success.');
+                    })
+                    .catch(() => {
+                        console.error('...Google Analytics proxy request fail.');
+                    });
+            });
+        })();
+    </script>
+    <!-- /GA proxy beaconing -->
     <!-- Scripts-->
 </body>
 
