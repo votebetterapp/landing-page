@@ -6,11 +6,12 @@ $main-color: #df3036;
 
 nav.navbar {
     background-color: rgba(0, 0, 0, 0);
-    
+
     color: white;
     -webkit-transition: background-color 0.5s;
     /* Safari */
     transition: background-color 0.5s;
+
     .navbar-nav a,
     .navbar-toggler-icon {
         color: white;
@@ -23,8 +24,8 @@ nav.navbar {
 
 .nav-scrolled {
     background-color: white !important;
-    box-shadow: 2px 3px 4px rgba(0,0,0,0.3);
-   
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 .mobile-logo {
@@ -44,11 +45,13 @@ nav img.mobile-logo {
     nav.navbar {
         background-color: white;
         color: $main-color;
+
         .navbar-nav a,
         .navbar-toggler-icon {
-            color:  $main-color;
+            color: $main-color;
         }
     }
+
     .mobile-logo {
         display: initial;
     }
@@ -67,7 +70,7 @@ nav img.red {
 }
 
 nav .navbar-toggler-icon i {
-    position:relative;
+    position: relative;
     top: 3px;
 }
 
@@ -77,7 +80,7 @@ nav .navbar-nav .nav-item .active {
 
 nav.nav-scrolled .navbar-toggler-icon i {
     color: $main-color;
-    position:relative;
+    position: relative;
     top: 3px;
 }
 
@@ -89,21 +92,70 @@ nav.nav-scrolled .navbar-toggler-icon i {
 #footer {
     //background-color: #9e0309;
     // background-color: #0c0b0b;
-    background-color: #2e3732;
-    color: white;
+    background-color: #262a28;
+    color: #c6c6c6;
     padding: 0.25em 0;
     margin-top: -1px;
-  
+    margin-bottom: -2px;
+
+    h2 {
+        color: white;
+    }
+
     img {
-      width: 200px;
+        width: 130px;
     }
-  
+
     a {
-      color: white;
-      padding: 1em;
+        color: white;
+        padding: 1em;
     }
-  }
-  
+
+    .text-row {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .spaced-top {
+        margin-top: 20px;
+    }
+
+    .copyright {
+        background-color: #141615;
+        position: relative;
+        top: 4px;
+        padding-bottom: 4px;
+    }
+
+    #facebook-share {
+        background-color:	#3b5998;
+        border-radius: 50%;
+        font-size: 20px;
+        padding: 5px 14px;
+        margin-right: 5px;
+    }
+
+    #twitter-share {
+        background-color:	#38A1F3;
+        border-radius: 50%;
+        font-size: 20px;
+        padding: 5px 10px;
+        margin-left: 5px;
+
+    }
+
+}
+
+nav button.navbar-toggler {
+    position: relative;
+    left: calc(100vw - 60px);
+}
+
+.mobile-logo {
+    position: fixed;
+    top: 2px;
+}
+
+
 
 
 /******** COMMON STYLES & MEDIA QUERIES ****/
