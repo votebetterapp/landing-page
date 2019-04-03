@@ -66,10 +66,10 @@
                     <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">ABOUT</a>
+                    <a class="nav-link active" href="./about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="./contact.html">CONTACT</a>
+                    <a class="nav-link " href="#">CONTACT</a>
                 </li>
             </ul>
         </div>
@@ -88,113 +88,25 @@
         </div>
 
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h5>Steph | March 20, 2019</h5>
-                <p>The concept of VoteBetter has been on my mind for some time now. It was just under two years ago that
-                    I was actively involved in student campus politics while completing my undergrad at Ryerson. I
-                    distinctly remember the desire to get involved in my community, and yet the
-                    difficulty and seemingly endless number of challenges I faced in doing so. </p>
-                <p>In an effort to learn more about the experiences of postsecondary campus voters, I created a survey
-                    in January of 2019 entitled- Survey on the State of Student Politics at Ryerson University and sent
-                    this survey to 60 of my peers on Facebook- all of whom were Ryerson students or
-                    alumni. Here’s what I learned: </p>
-                <ul>
-                    <li>
-                        There is limited awareness among the general student body regarding the structure, processes,
-                        and roles of student organizations on campus (e.g. the Ryerson Students' Union);
 
-                    </li>
-                    <li>
-                        There may be considerable difficulty determining who the best candidate is for any given
-                        position; and
-                    </li>
-                    <li>
-                        Students do not feel empowered as voters to take advantage of the ways in which they can hold
-                        their elected representatives accountable.
-                    </li>
-                </ul>
-                <p> Above all arose the need for adopting a holistic approach to tackling these challenges. This means
-                    not just encouraging people to vote once a year but building capacity before and after the
-                    elections. Civic engagement is more than just casting a ballot, it’s about what has to
-                    happen before and after the ballot is cast to keep people motivated to go back to the polls. </p>
-
-                <p> These three challenges informed the core objectives of VoteBetter:</p>
-
-                <ul>
-                    <li>
-                        Make transparent the structures, processes, and roles of student organizations on campus;
-
-                    </li>
-                    <li>
-                        Foster an environment of political dialogue where candidates campaign around issues that matter
-                        most to students; and
-                    </li>
-                    <li>
-                        Hold elected representatives accountable to their campaign promises through the meticulous and
-                        non-partisan tracking of deliverables.
-                    </li>
-                </ul>
-
-                <p>I graduated from Ryerson in the spring of 2017 but still feel very much a part of the student campus
-                    community (if you are also alumni, please tell me I’m not the only one!). Students are opinionated,
-                    autonomous, outspoken, and learning to become politically aware. Many of us are
-                    tech-savvy and adapt to new ways in which technology can enhance our everyday lives. Most of all, we
-                    want to have a say on issues that matter to and affect us. If student campus politics have left you
-                    feeling discouraged or confused, you’re definitely not alone. I know we can do
-                    better and I’m excited for the journey ahead.
-                </p>
-
-                <p>
-                    Thank you for taking the time to visit VoteBetter. We’ve covered a lot of ground to get here but
-                    there’s still a lot to learn. I'd love to have you join us for the ride.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row about-us">
-            <div class='col-md-12 col-sm-12'>
-                <h2 class="container-title">Our Team</h2>
-            </div>
-            <div class="col-md-4 col-sm-12 person">
-                <img class="image" src="./assets/about/stephanie.jpg">
-                <h3 class="name">Stephanie Cheung</h3>
-                <p class="title">Ryerson alumni (2017)</p>
-                <p class="description"> GTA born and raised program enthusiast and evaluation ninja. Always on the
-                    lookout for new ways to pursue sustainable and equitable change in the lives of young people. Happy
-                    to chat and share ideas!</p>
-                <a class="social" href="https://www.linkedin.com/in/stephcto/" target="_blank"><i
-                        class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            </div>
-            <div class="col-md-4 col-sm-12 person">
-                <img class="image" src="./assets/about/matthew.jpg">
-                <h3 class="name">Matt Welke </h3>
-                <p class="title">Seneca alumni (2018) </p>
-                <p class="description"> Toronto software developer. Passionate about open source, teaching, transit and
-                    other civic issues.</p>
-                <a class="social" href="https://www.linkedin.com/in/matthew-welke-31866288/" target="_blank"><i
-                        class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a class="social" href="https://www.mattwelke.com" target="_blank"><i class="fa fa-globe"
-                        aria-hidden="true"></i></a>
-            </div>
-            <div class="col-md-4 col-sm-12 person">
-                <img class="image" src="./assets/about/eldon.jpg">
-                <h3 class="name">Eldon Gonio</h3>
-                <p class="title">York alumni (2017)</p>
-                <p class="description"> Front end developer from Toronto, Ontario. Nerdy about UX design. Likes Gaming
-                    and Arts.</p>
-                <a class="social" href="https://www.linkedin.com/in/eldon-gonio-b9b1b8125/" target="_blank"><i
-                        class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a class="social" href="http://www.eldongonio.com" target="_blank"><i class="fa fa-globe"
-                        aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-
-
+    <form id="contact-form" name="contact" method="POST" data-netlify="true">
+        <p>
+            <label>Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>Subject: <input type="text" name="subject" /></label>
+        </p>
+        <p>
+            <label>Message: <textarea name="message" form="contact-form" cols="30"
+                    rows="12">Enter message here...</textarea></label>
+        </p>
+        <p>
+            <button type="submit">Send</button>
+        </p>
+    </form>
 
     <!-- Footer -->
     <section id="footer">
@@ -249,7 +161,7 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/getYear.js"></script>
-
+    
     <!-- GA proxy beaconing -->
     <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
     <script>
@@ -258,7 +170,7 @@
             if (window.location.hostname !== 'votebetter.app') {
                 return;
             }
-
+            
             var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
             function uuid() {
                 var uuid = "", i, random;
