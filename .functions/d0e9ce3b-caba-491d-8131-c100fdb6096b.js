@@ -1,4 +1,5 @@
 exports.handler = function(event, context, callback) {
     // your server-side functionality
-    console.info(JSON.stringify(event));
+    console.info(`event :${event}`);
+    console.info(`cid: ${event.cid}`);
 }
