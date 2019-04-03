@@ -106,7 +106,7 @@ nav button.navbar-toggler {
   top: 2px; }
 
 @media (max-width: 767px) {
-  .text-md-center {
+  .text-center-mobile {
     text-align: center; } }
 
 /******** COMMON STYLES & MEDIA QUERIES ****/
