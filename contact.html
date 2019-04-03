@@ -48,7 +48,7 @@
     <!-- GA proxy beaconing -->
     <script>
         (function () {
-            const gaProxyUrl = 'unknown';
+            var gaProxyUrl = 'https://deploy-preview-4--vote-better-app.netlify.com/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
             function uuid() {
                 var uuid = "", i, random;
                 for (i = 0; i < 32; i++) {
@@ -69,21 +69,22 @@
             }
             document.addEventListener('DOMContentLoaded', function () {
                 console.info('Starting Google Analytics proxy request...');
-                axios.post(gaProxyUrl, {
-                    cid,
-                    dl: document.location.href,
-                    dr: document.referrer,
-                    ua: navigator.userAgent,
-                    sr: `${window.screen.width}x${window.screen.height}`,
-                    vp: `${window.innerWidth}x${window.innerHeight}`,
-                    ul: window.navigator.language,
-                })
-                    .then(() => {
+                $.ajax({
+                    type: 'POST',
+                    url: gaProxyUrl,
+                    data: {
+                        cid: cid,
+                        dl: document.location.href,
+                        dr: document.referrer,
+                        ua: navigator.userAgent,
+                        sr: `${window.screen.width}x${window.screen.height}`,
+                        vp: `${window.innerWidth}x${window.innerHeight}`,
+                        ul: window.navigator.language
+                    },
+                    success: function () {
                         console.info('...Google Analytics proxy request success.');
-                    })
-                    .catch(() => {
-                        console.error('...Google Analytics proxy request fail.');
-                    });
+                    }
+                });
             });
         })();
     </script>
