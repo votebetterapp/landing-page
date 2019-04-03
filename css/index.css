@@ -105,6 +105,10 @@ nav button.navbar-toggler {
   position: fixed;
   top: 2px; }
 
+@media (max-width: 767px) {
+  .text-md-center {
+    text-align: center; } }
+
 /******** COMMON STYLES & MEDIA QUERIES ****/
 html,
 body {
