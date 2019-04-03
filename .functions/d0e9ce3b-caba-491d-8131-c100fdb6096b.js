@@ -1,7 +1,7 @@
-// const axios = require('axios');
-// const querystring = require('querystring');
-
 exports.handler = function (event, context, callback) {
+    const axios = require('axios');
+    const querystring = require('querystring');
+
     const body = JSON.parse(event.body);
 
     // Get IP from event included header
