@@ -1,6 +1,5 @@
-import axios from axios;
-
 exports.handler = function (event, context, callback) {
+    const https = require('https');
     const querystring = require('querystring');
 
     const body = JSON.parse(event.body);
@@ -46,15 +45,41 @@ exports.handler = function (event, context, callback) {
     });
     console.info(`ga payload: ${JSON.stringify(gaPayload)}`);
 
-    axios.post(
-        'https://www.google-analytics.com/collect',
-        gaPayload,
-        {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
+    const options = {
+        hostname: 'www.google-analytics.com',
+        port: 443,
+        path: '/collect',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': gaPayload.length,
         },
-    ).then(() => {
-        console.info('Axios post to GA successful.');
+    };
+
+    const req = https.request(options, res => {
+        console.info(`GA POST response status code: ${res.statusCode}`);
+
+        res.on('data', d => {
+            console.info(`GA POST successful.`);
+        });
     });
+
+    req.on('error', e => {
+        throw e;
+    })
+
+    req.write(gaPayload);
+    req.end();
+
+    // axios.post(
+    //     'https://www.google-analytics.com/collect',
+    //     gaPayload,
+    //     {
+    //         headers: {
+    //             'Content-Type': 'application/x-www-form-urlencoded'
+    //         },
+    //     },
+    // ).then(() => {
+    //     console.info('Axios post to GA successful.');
+    // });
 }
