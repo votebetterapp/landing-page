@@ -1,5 +1,5 @@
-const axios = require('axios');
-const querystring = require('querystring');
+// const axios = require('axios');
+// const querystring = require('querystring');
 
 exports.handler = function (event, context, callback) {
     const body = JSON.parse(event.body);
