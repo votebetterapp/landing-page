@@ -161,11 +161,12 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/getYear.js"></script>
+    
     <!-- GA proxy beaconing -->
     <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
     <script>
         (function () {
-            var gaProxyUrl = 'https://deploy-preview-4--vote-better-app.netlify.com/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
+            var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
             function uuid() {
                 var uuid = "", i, random;
                 for (i = 0; i < 32; i++) {

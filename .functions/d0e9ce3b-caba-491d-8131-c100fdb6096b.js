@@ -32,7 +32,7 @@ exports.handler = function (event, context, callback) {
 
     const gaPayload = querystring.stringify({
         v: '1',
-        tid: 'unknown',
+        tid: 'UA-137586657-1',
         cid,
         t: 'pageview',
         dl,
