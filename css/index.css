@@ -187,7 +187,7 @@ body {
     display: initial; }
   .desktop-only {
     display: none; }
-  .text-md-center {
+  .text-center-mobile {
     text-align: center; } }
 
 .jumbotron {

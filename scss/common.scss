@@ -115,6 +115,7 @@ nav.nav-scrolled .navbar-toggler-icon i {
         padding-top: 2em;
         padding-bottom: 2em;
     }
+
     .spaced-top {
         margin-top: 20px;
     }
@@ -127,7 +128,7 @@ nav.nav-scrolled .navbar-toggler-icon i {
     }
 
     #facebook-share {
-        background-color:	#3b5998;
+        background-color: #3b5998;
         border-radius: 50%;
         font-size: 20px;
         padding: 5px 14px;
@@ -135,7 +136,7 @@ nav.nav-scrolled .navbar-toggler-icon i {
     }
 
     #twitter-share {
-        background-color:	#38A1F3;
+        background-color: #38A1F3;
         border-radius: 50%;
         font-size: 20px;
         padding: 5px 10px;
@@ -157,11 +158,10 @@ nav button.navbar-toggler {
 
 
 @media (max-width: 767px) {
-
     .text-md-center {
-      text-align: center;
+        text-align: center;
     }
-  }
+}
 
 
 
