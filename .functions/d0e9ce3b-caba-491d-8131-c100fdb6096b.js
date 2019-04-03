@@ -3,7 +3,7 @@
 const axios = require('axios');
 const querystring = require('querystring');
 
-exports.handler = async function (event, context, callback) {
+exports.handler = function (event, context, callback) {
     const body = JSON.parse(event.body);
 
     // Get IP from event included header
@@ -47,7 +47,7 @@ exports.handler = async function (event, context, callback) {
     });
     console.info(`ga payload: ${JSON.stringify(gaPayload)}`);
 
-    await axios.post(
+    axios.post(
         'https://www.google-analytics.com/collect',
         gaPayload,
         {
@@ -55,5 +55,7 @@ exports.handler = async function (event, context, callback) {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
         },
-    );
+    ).then(() => {
+        console.info('Axios post to GA successful.');
+    });
 }
