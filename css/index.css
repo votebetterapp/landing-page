@@ -182,7 +182,9 @@ body {
   .mobile-only {
     display: initial; }
   .desktop-only {
-    display: none; } }
+    display: none; }
+  .text-md-center {
+    text-align: center; } }
 
 .jumbotron {
   background-color: #df3036;
