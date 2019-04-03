@@ -44,6 +44,50 @@
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/about.css">
+
+    <!-- GA proxy beaconing -->
+    <script>
+        (function () {
+            const gaProxyUrl = 'unknown';
+            function uuid() {
+                var uuid = "", i, random;
+                for (i = 0; i < 32; i++) {
+                    random = Math.random() * 16 | 0;
+                    if (i == 8 || i == 12 || i == 16 || i == 20) {
+                        uuid += "-"
+                    }
+                    uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
+                }
+                return uuid;
+            }
+            // Anonymous user identification so GA tracks users and sessions properly
+            var cidKey = 'votebetter.app-cid';
+            var cid = localStorage.getItem(cidKey);
+            if (cid === null) {
+                cid = uuid();
+                localStorage.setItem(cidKey, cid);
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                console.info('Starting Google Analytics proxy request...');
+                axios.post(gaProxyUrl, {
+                    cid,
+                    dl: document.location.href,
+                    dr: document.referrer,
+                    ua: navigator.userAgent,
+                    sr: `${window.screen.width}x${window.screen.height}`,
+                    vp: `${window.innerWidth}x${window.innerHeight}`,
+                    ul: window.navigator.language,
+                })
+                    .then(() => {
+                        console.info('...Google Analytics proxy request success.');
+                    })
+                    .catch(() => {
+                        console.error('...Google Analytics proxy request fail.');
+                    });
+            });
+        })();
+    </script>
+    <!-- /GA proxy beaconing -->
 </head>
 
 <body>
@@ -100,7 +144,8 @@
             <label>Subject: <input type="text" name="subject" /></label>
         </p>
         <p>
-            <label>Message: <textarea name="message" form="contact-form" cols="30" rows="12">Enter message here...</textarea></label>
+            <label>Message: <textarea name="message" form="contact-form" cols="30"
+                    rows="12">Enter message here...</textarea></label>
         </p>
         <p>
             <button type="submit">Send</button>
