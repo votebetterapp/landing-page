@@ -220,10 +220,13 @@ h6 {
       color: gray; }
 
 p {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  margin-bottom: 1.5em; }
 
-ul li {
-  font-size: 1.1em; }
+ul {
+  margin-bottom: 1.5em; }
+  ul li {
+    font-size: 1.1em; }
 
 @media (max-width: 768px) {
   .about-us .image {
