@@ -70,10 +70,12 @@
     </nav>
     <div class="jumbotron">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <div class="col-md-12 col-sm-12">
-                    <h2 class="display-4">CONTACT US
+                    <h2 class="display-4">Get in touch
                     </h2>
+                    <h2>We'd love to hear from you</h2>
+                    <h4> Email us with any questions or inquiry. We would be happy to answer your questions. We look forward to hearing from you. </h4>
                 </div>
                 <div class="col-md-12 col-sm-12">
 
@@ -82,62 +84,82 @@
         </div>
     </div>
 
+    <!-- 
     <div class="container">
-        <div class="row">
+        <div class="row container-title">
+
             <div class="col-md-12 col-sm-12">
+                <br />
                 <h3 class="display-4"><strong>We'd love to hear from you</strong></h3>
                 <p class="display-5"> Email us with any questions or inquiry. We would be happy to answer your questions. We look forward to hearing from you.</p>
             </div>
         </div>
     </div>
-    <!-- 
-    <form id="contact-form" name="contact" method="POST" data-netlify="true">
-        <p>
-            <label>Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-            <label>Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-            <label>Subject: <input type="text" name="subject" /></label>
-        </p>
-        <p>
-            <label>Message: <textarea name="message" form="contact-form" rows="12">Enter message here...</textarea></label>
-        </p>
-        <p>
-            <button type="submit">Send</button>
-        </p>
-    </form>
-    -->
+-->
 
+    <div class="container marginated">
+        <div class="row contact-card">
+            <div class="col-md-4 col-sm-12 right order-md-2">
+                <h2><strong> Contact Information</strong></h2>
+                <br />
+                <div class="flex">
+                    <div class="flex-left">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                    <div class='flex-right'>
+                        <a href="mailto:votebetterapp@gmail.com" target="_blank">votebetterapp@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="flex-left">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class='flex-right'>
+                        <p>
+                            VoteBetter App <br />
+                            PO Box 77518 <br />
+                            Sheppard Plaza PO <br />
+                            North York ON M3H 6A7</p>
+                    </div>
+                </div>
 
-    <div class="wrapper">
-        <div class="container">
-            <form id="contact-form" name="contact" method="POST" data-netlify="true">
-                <div class="form-group col-md-12">
-                    <input type="text" name="name" class="form-control" id="name">
-                    <label for="name">Name</label>
-                    <div class="line"></div>
+            </div>
+            <div class="col-md-8 col-sm-12 left order-md-1">
+                <div class="container form-container">
+                    <br />
+                    <h2 class="red"> <strong> Send us a message </strong> <span style="float:right"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <i class="fa fa-envelope-o" aria-hidden="true"></i></span></h2>
+                    <br />
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true">
+                        <div class="form-group col-md-12">
+                            <input type="text" name="name" class="form-control" id="name">
+                            <label for="name">Name</label>
+                            <div class="line"></div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="email" class="form-control" name="email" id="email">
+                            <label for="email">Email</label>
+                            <div class="line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" id="subject">
+                            <label for="subject">Subject</label>
+                            <div class="line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" form="contact-form" rows="12"></textarea>
+                            <label>Message</label>
+                            <div class="line"></div>
+                        </div>
+                        <p>
+                            <button type="submit" class="btn send-button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        </p>
+                    </form>
                 </div>
-                <div class="form-group col-md-12">
-                    <input type="email" class="form-control" name="email" id="email">
-                    <label for="email">Email</label>
-                    <div class="line"></div>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" class="form-control" id="subject">
-                    <label for="subject">Subject</label>
-                    <div class="line"></div>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="message" form="contact-form" rows="12"></textarea>
-                    <label>Message</label>
-                    <div class="line"></div>
-                </div>
-                <button type="submit" class="btn btn-success">Send</button>
-            </form>
+            </div>
+
         </div>
     </div>
+
 
 
     <!-- Footer -->
@@ -166,7 +188,7 @@
                                 <div class="mc-field-group form-group spaced-top">
 
                                     <label for="mce-EMAIL">Join our mailing list for the latest news and information for VoteBetter.app</label>
-                                    <input type="email" class="form-control" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@email.com">
+                                    <input type="email" class="form-control" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@email.com" style="background-color:white; border-radius: 3px">
                                 </div>
                                 <div id="mce-responses" class="clear">
                                     <div class="response" id="mce-error-response" style="display:none"></div>

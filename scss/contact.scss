@@ -3,9 +3,10 @@
 .jumbotron {
     background-color: $main-color;
     border-radius: 0;
-    padding-top: 7em;
+    padding-top: 15vh;
     padding-bottom: 7em;
     color: white;
+    height: 50vh;
 
     /* The image used */
     background-image: url('../assets/main-jumbo.png');
@@ -33,7 +34,7 @@
 // Base Variables
 $colour-primary: #555555;
 $colour-secondary: #555555;
-$colour-grey: #26C6DA;
+$colour-grey: #e34740;;
 $grid-gutter-width: 30px;
 $input-padding-horizontal: $grid-gutter-width / 3;
 $input-padding-vertical: $grid-gutter-width / 3;
@@ -71,6 +72,7 @@ body {
     color: $colour-primary;
     font-size: 0.9rem;
 }
+
 
 h1 {
     font-weight: 400;
@@ -200,4 +202,142 @@ h1 {
 // Remove Bootstrap 4 height from select
 select.form-control:not([size]):not([multiple]) {
     height: 44px;
+}
+
+
+.container-title {
+    text-align: center;
+    h3 {
+        color: $main-color;
+    }
+}
+/*
+.form-container {
+    box-shadow: 1px 2px 3px lightgray;
+    border-radius: 5px;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 1.5em;
+}
+*/
+
+.red {
+    color: $main-color;
+}
+.marginated {
+    margin-top: 5em;
+    margin-bottom: 4em;
+
+    .contact-card {
+        margin-top: -20vh;
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+        
+        border-radius: 5px;
+
+        h2.red span {
+            float: right;
+            font-size: 2em;
+            margin-top: -20px;
+        }
+
+        .send-button {
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 20px;
+            padding-right: 17px;
+            color: white;
+            float: right;
+            background-color:#e34740;
+        }
+
+        .left {
+            border-top: 1px solid #e8e8e8;
+            border-left: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-bottom: 1em;
+            padding-top: 1em;
+        }
+
+        .right {
+            background-color:#77191d;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            color: white;
+            padding: 1em 2em;
+            padding-top: 2em;
+            a {
+                color: white;
+            }
+
+            .flex {
+                display: flex;
+                margin-bottom: 1em;
+
+                .flex-left {
+                    padding-right: 1em;
+                    font-size: 1.5em;
+                    width: 42px;
+                    float:left;
+                }
+
+                .flex-right {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .marginated {
+        .contact-card {
+            margin-top: -10em;
+            .left {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+    
+            .right {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 0;
+                border-top-left-radius: 5px;
+                color: white;
+                padding: 1em 2em;
+                padding-top: 2em;
+                a {
+                    color: white;
+                }
+    
+                .flex {
+                    .flex-right {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .jumbotron {
+        padding-top: 100px;
+        height: 370px;
+    
+        .button-container {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 1em;
+            padding-top: 2.5em;
+            button {
+                font-size: 1.2em;
+                font-weight: 500;
+                padding: 0.755em 1.5em;
+            }
+        }
+    }
+    
+
+
 }
