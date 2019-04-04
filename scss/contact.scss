@@ -1,0 +1,343 @@
+@import './common.scss';
+
+.jumbotron {
+    background-color: $main-color;
+    border-radius: 0;
+    padding-top: 15vh;
+    padding-bottom: 7em;
+    color: white;
+    height: 50vh;
+
+    /* The image used */
+    background-image: url('../assets/main-jumbo.png');
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-top: 2.5em;
+
+        button {
+            font-size: 1.2em;
+            font-weight: 500;
+            padding: 0.755em 1.5em;
+        }
+    }
+}
+
+
+// Base Variables
+$colour-primary: #555555;
+$colour-secondary: #555555;
+$colour-grey: #e34740;;
+$grid-gutter-width: 30px;
+$input-padding-horizontal: $grid-gutter-width / 3;
+$input-padding-vertical: $grid-gutter-width / 3;
+
+// Linear Gradient Mixin
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+    background-color: $from;
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+    background: linear-gradient(to right, $from 0%, $to $stop);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
+}
+
+// Page Wrapper
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    padding: $grid-gutter-width * 2 0;
+}
+
+// Typography
+
+* {
+    font-family: "Montserrat", sans-serif
+}
+
+body {
+    color: $colour-primary;
+    font-size: 0.9rem;
+}
+
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: darken($colour-grey, 15%);
+    text-align: center;
+}
+
+// Basic form styling
+
+.form-row {
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+
+    .form-group {
+        padding: $grid-gutter-width / 2 $grid-gutter-width / 2 0;
+        align-self: flex-end;
+    }
+}
+
+.form-group {
+    position: relative;
+    padding-top: $grid-gutter-width / 2;
+    margin-bottom: $grid-gutter-width;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    padding: $grid-gutter-width / 3 $input-padding-horizontal;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    font-size: 0.9rem;
+
+    &:not(textarea) {
+        height: 44px;
+    }
+
+    +label {
+        position: absolute;
+        z-index: 1;
+        top: $input-padding-vertical + $grid-gutter-width / 2;
+        margin: 0;
+        transition: all 0.2s ease-in-out;
+        pointer-events: none;
+        left: $input-padding-horizontal;
+        right: $input-padding-horizontal;
+    }
+
+    &:focus {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    &:focus {
+        +label {
+            color: $colour-primary;
+        }
+    }
+
+    &:focus,
+    &.has-value {
+
+        +label {
+            font-size: 0.75rem;
+            top: 0;
+        }
+
+    }
+
+}
+
+// Position labels for when javascript is disabled
+.no-js {
+    .form-control+label {
+        font-size: 0.75rem;
+        top: 0;
+    }
+}
+
+.form-row {
+    .form-control {
+        +label {
+            left: $grid-gutter-width / 2 + $input-padding-horizontal;
+            right: $grid-gutter-width / 2 + $input-padding-horizontal;
+        }
+    }
+
+    .line {
+        left: $grid-gutter-width / 2;
+        right: $grid-gutter-width / 2;
+    }
+}
+
+.line {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    @include horizontal-gradient($colour-primary, $colour-secondary);
+
+    &:after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        display: block;
+        background: $colour-grey;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: 0 0;
+    }
+}
+
+.form-control:focus {
+    ~.line {
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+// Remove Bootstrap 4 height from select
+select.form-control:not([size]):not([multiple]) {
+    height: 44px;
+}
+
+
+.container-title {
+    text-align: center;
+    h3 {
+        color: $main-color;
+    }
+}
+/*
+.form-container {
+    box-shadow: 1px 2px 3px lightgray;
+    border-radius: 5px;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 1.5em;
+}
+*/
+
+.red {
+    color: $main-color;
+}
+.marginated {
+    margin-top: 5em;
+    margin-bottom: 4em;
+
+    .contact-card {
+        margin-top: -20vh;
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+        
+        border-radius: 5px;
+
+        h2.red span {
+            float: right;
+            font-size: 2em;
+            margin-top: -20px;
+        }
+
+        .send-button {
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 20px;
+            padding-right: 17px;
+            color: white;
+            float: right;
+            background-color:#e34740;
+        }
+
+        .left {
+            border-top: 1px solid #e8e8e8;
+            border-left: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-bottom: 1em;
+            padding-top: 1em;
+        }
+
+        .right {
+            background-color:#77191d;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            color: white;
+            padding: 1em 2em;
+            padding-top: 2em;
+            a {
+                color: white;
+            }
+
+            .flex {
+                display: flex;
+                margin-bottom: 1em;
+
+                .flex-left {
+                    padding-right: 1em;
+                    font-size: 1.5em;
+                    width: 42px;
+                    float:left;
+                }
+
+                .flex-right {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .marginated {
+        .contact-card {
+            margin-top: -10em;
+            .left {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+    
+            .right {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 0;
+                border-top-left-radius: 5px;
+                color: white;
+                padding: 1em 2em;
+                padding-top: 2em;
+                a {
+                    color: white;
+                }
+    
+                .flex {
+                    .flex-right {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .jumbotron {
+        padding-top: 100px;
+        height: 370px;
+    
+        .button-container {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 1em;
+            padding-top: 2.5em;
+            button {
+                font-size: 1.2em;
+                font-weight: 500;
+                padding: 0.755em 1.5em;
+            }
+        }
+    }
+    
+
+
+}
