@@ -1,0 +1,301 @@
+.primary-color {
+  color: #df3036; }
+
+nav.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  -webkit-transition: background-color 0.5s;
+  /* Safari */
+  transition: background-color 0.5s; }
+  nav.navbar .navbar-nav a,
+  nav.navbar .navbar-toggler-icon {
+    color: white;
+    -webkit-transition: color 0.5s;
+    /* Safari */
+    transition: color 0.5s;
+    font-weight: 400; }
+
+.nav-scrolled {
+  background-color: white !important;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3); }
+
+.mobile-logo {
+  display: none; }
+
+.nav-scrolled .navbar-nav a {
+  color: #df3036 !important; }
+
+nav img.mobile-logo {
+  height: 40px; }
+
+@media (max-width: 992px) {
+  nav.navbar {
+    background-color: white;
+    color: #df3036; }
+    nav.navbar .navbar-nav a,
+    nav.navbar .navbar-toggler-icon {
+      color: #df3036; }
+  .mobile-logo {
+    display: initial; }
+  .mobile-hidden {
+    display: none !important; } }
+
+nav img.logo {
+  height: 40px; }
+
+nav img.red {
+  display: none; }
+
+nav .navbar-toggler-icon i {
+  position: relative;
+  top: 3px; }
+
+nav .navbar-nav .nav-item .active {
+  font-weight: bold; }
+
+nav.nav-scrolled .navbar-toggler-icon i {
+  color: #df3036;
+  position: relative;
+  top: 3px; }
+
+.text-centered {
+  text-align: center; }
+
+#footer {
+  background-color: #262a28;
+  color: #c6c6c6;
+  padding: 0.25em 0;
+  margin-top: -1px;
+  margin-bottom: -2px; }
+  #footer h2 {
+    color: white; }
+  #footer img {
+    width: 130px; }
+  #footer a {
+    color: white;
+    padding: 1em; }
+  #footer .text-row {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+  #footer .spaced-top {
+    margin-top: 20px; }
+  #footer .copyright {
+    background-color: #141615;
+    position: relative;
+    top: 4px;
+    padding-bottom: 4px; }
+  #footer #facebook-share {
+    background-color: #3b5998;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px 14px;
+    margin-right: 5px; }
+  #footer #twitter-share {
+    background-color: #38A1F3;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-left: 5px; }
+
+nav button.navbar-toggler {
+  position: relative;
+  left: calc(100vw - 60px); }
+
+.mobile-logo {
+  position: fixed;
+  top: 2px; }
+
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center; } }
+
+/******** COMMON STYLES & MEDIA QUERIES ****/
+html,
+body {
+  font-size: 12px !important; }
+
+h1 {
+  font-size: 1.75em; }
+
+h2 {
+  font-size: 1.424em; }
+
+h3 {
+  font-size: 1.266em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 0.889em; }
+
+h6 {
+  font-size: 0.79em; }
+
+.display-1 {
+  font-size: 3.906em; }
+
+.display-2 {
+  font-size: 3.125em; }
+
+.display-3 {
+  font-size: 2.5em; }
+
+.display-4 {
+  font-size: 2em; }
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.5em; }
+  h2 {
+    font-size: 1.5em; }
+  h3 {
+    font-size: 1.2em; }
+  h4 {
+    font-size: 1em; }
+  .display-1 {
+    font-size: 6em; }
+  .display-2 {
+    font-size: 5.5em; }
+  .display-3 {
+    font-size: 4.5em; }
+  .display-4 {
+    font-size: 3.5em; } }
+
+@media (min-width: 62em) {
+  html,
+  body {
+    font-size: 13px !important; } }
+
+@media (min-width: 75em) {
+  html,
+  body {
+    font-size: 14px !important; } }
+
+.jumbotron {
+  background-color: #df3036;
+  border-radius: 0;
+  padding-top: 7em;
+  padding-bottom: 7em;
+  color: white;
+  /* The image used */
+  background-image: url("../assets/main-jumbo.png");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .jumbotron .button-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2.5em; }
+    .jumbotron .button-container button {
+      font-size: 1.2em;
+      font-weight: 500;
+      padding: 0.755em 1.5em; }
+
+html,
+body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  padding: 60px 0; }
+
+* {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  color: #555555;
+  font-size: 0.9rem; }
+
+h1 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #1a8b99;
+  text-align: center; }
+
+.form-row {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .form-row .form-group {
+    padding: 15px 15px 0;
+    align-self: flex-end; }
+
+.form-group {
+  position: relative;
+  padding-top: 15px;
+  margin-bottom: 30px; }
+
+.form-control {
+  border: 0;
+  border-radius: 0;
+  padding: 10px 10px;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  font-size: 0.9rem; }
+  .form-control:not(textarea) {
+    height: 44px; }
+  .form-control + label {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    left: 10px;
+    right: 10px; }
+  .form-control:focus {
+    box-shadow: none;
+    background-color: transparent; }
+  .form-control:focus + label {
+    color: #555555; }
+  .form-control:focus + label, .form-control.has-value + label {
+    font-size: 0.75rem;
+    top: 0; }
+
+.no-js .form-control + label {
+  font-size: 0.75rem;
+  top: 0; }
+
+.form-row .form-control + label {
+  left: 25px;
+  right: 25px; }
+
+.form-row .line {
+  left: 15px;
+  right: 15px; }
+
+.line {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #555555;
+  background-image: -moz-linear-gradient(left, #555555 0%, #555555 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #555555), color-stop(100%, #555555));
+  background-image: -webkit-linear-gradient(left, #555555 0%, #555555 100%);
+  background-image: -o-linear-gradient(left, #555555 0%, #555555 100%);
+  background: -ms-linear-gradient(left, #555555 0%, #555555 100%);
+  background: linear-gradient(to right, #555555 0%, #555555 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1); }
+  .line:after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    display: block;
+    background: #26C6DA;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: 0 0; }
+
+.form-control:focus ~ .line:after {
+  transform: scaleX(1); }
+
+select.form-control:not([size]):not([multiple]) {
+  height: 44px; }
