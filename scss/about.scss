@@ -6,6 +6,7 @@
     padding-top: 7em;
     padding-bottom: 7em;
     color: white;
+    height: 300px;
 
     /* The image used */
     background-image: url('../assets/main-jumbo.png');
@@ -87,5 +88,9 @@ ul {
         .image {
             margin-top: 2em;
         }
+    }
+
+    .jumbotron {
+        height: 200px;
     }
 }

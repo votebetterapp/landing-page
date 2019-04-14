@@ -178,6 +178,7 @@ h6 {
   padding-top: 7em;
   padding-bottom: 7em;
   color: white;
+  height: 300px;
   /* The image used */
   background-image: url("../assets/main-jumbo.png");
   /* Center and scale the image nicely */
@@ -230,4 +231,6 @@ ul {
 
 @media (max-width: 768px) {
   .about-us .image {
-    margin-top: 2em; } }
+    margin-top: 2em; }
+  .jumbotron {
+    height: 200px; } }

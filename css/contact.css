@@ -175,10 +175,10 @@ h6 {
 .jumbotron {
   background-color: #df3036;
   border-radius: 0;
-  padding-top: 15vh;
+  padding-top: 7em;
   padding-bottom: 7em;
   color: white;
-  height: 50vh;
+  height: 300px;
   /* The image used */
   background-image: url("../assets/main-jumbo.png");
   /* Center and scale the image nicely */
@@ -321,7 +321,6 @@ select.form-control:not([size]):not([multiple]) {
   margin-top: 5em;
   margin-bottom: 4em; }
   .marginated .contact-card {
-    margin-top: -20vh;
     background-color: white;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border-radius: 5px; }
@@ -366,8 +365,10 @@ select.form-control:not([size]):not([multiple]) {
           font-size: 1.1em; }
 
 @media (max-width: 767px) {
-  .marginated .contact-card {
-    margin-top: -10em; }
+  .jumbotron {
+    height: 200px; }
+  .marginated {
+    margin-top: 0; }
     .marginated .contact-card .left {
       border-top-left-radius: 0;
       border-bottom-left-radius: 5px;
@@ -384,8 +385,7 @@ select.form-control:not([size]):not([multiple]) {
       .marginated .contact-card .right .flex .flex-right {
         font-size: 1.1em; }
   .jumbotron {
-    padding-top: 100px;
-    height: 370px; }
+    padding-top: 75px; }
     .jumbotron .button-container {
       width: 100%;
       text-align: center;
