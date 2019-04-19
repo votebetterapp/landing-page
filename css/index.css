@@ -244,6 +244,19 @@ body {
     padding-top: 20px; }
     .why-join .text-container p {
       margin-bottom: 0; }
+  .why-join p.percent {
+    font-size: 21px; }
+  .why-join .why-join-1 img {
+    margin-top: 1.2rem; }
+  .why-join .why-join-2 img {
+    margin-top: 0.3rem; }
+  .why-join .why-join-4 img {
+    margin-top: 0.3rem; }
+  .why-join p.data-collected, .why-join p.can-do-better {
+    margin-top: 1rem; }
+  .why-join p.can-do-better {
+    font-size: 21px;
+    font-weight: bold; }
 
 .video-content {
   padding-top: 25px;
