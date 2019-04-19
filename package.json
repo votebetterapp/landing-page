@@ -1,0 +1,26 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/votebetterapp/landing-page.git"
+  },
+  "keywords": [],
+  "author": "VoteBetter App Team Members",
+  "bugs": {
+    "url": "https://github.com/votebetterapp/landing-page/issues"
+  },
+  "homepage": "https://github.com/votebetterapp/landing-page#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

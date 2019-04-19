@@ -102,6 +102,50 @@ body {
       margin-bottom: 0;
     }
   }
+
+  p.percent {
+    // Using px instead of rem because need to match h2 size
+    font-size: 21px;
+  }
+
+  // Adding some margin-top to either the icon or the percent text
+  // so that each lines up properly. This would change if the text
+  // or icons change size in the future.
+  .why-join-1 {
+    img {
+      margin-top: 1.2rem;
+    }
+  }
+
+  .why-join-2 {
+    img {
+      margin-top: 0.3rem;
+    }
+  }
+
+  .why-join-3 {
+    img {
+      // margin-top: 0.1rem;
+    }
+  }
+
+  .why-join-4 {
+    img {
+      margin-top: 0.3rem;
+    }
+  }
+
+  // No shift needed for why-join-5
+
+  p.data-collected, p.can-do-better {
+    margin-top: 1rem;
+  }
+
+  p.can-do-better {
+    // Using px instead of rem because need to match h2 size
+    font-size: 21px;
+    font-weight: bold;
+  }
 }
 
 .video-content {
@@ -527,8 +571,6 @@ body {
     font-size: 1.4em;
   }
 }
-
-
 
 
 .testimonial-text {
