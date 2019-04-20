@@ -542,6 +542,19 @@ body {
     padding: 0 !important;
   }
 
+  // Adding vertical space to each footer section (ex. mailing list, social icons)
+  // only on mobile view, that way desktop view has them horizontal with no
+  // space on top, but mobile spaces them out vertically a bit
+  .vba-footer-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  // Adding vertical space to each "why join" point on mobile.
+  .why-join .icon-row {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 
