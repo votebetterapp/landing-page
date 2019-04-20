@@ -16,7 +16,7 @@
     <meta property="og:title" content="VoteBetter" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://votebetter.app/" />
-    <meta property="og:image" content="./assets/open-graph/website.PNG" />
+    <meta property="og:image" content="./assets/open-graph/website.jpg" />
     <meta property="og:description" content="Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change." />
     <meta property="og:site_name" content="Vote Better App" />
 
@@ -28,7 +28,7 @@
     <meta name="twitter:description" content="Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
     <meta name="keywords" content="vote, students, politics">
     <meta name="twitter:creator" content="@author_handle">
-    <meta name="twitter:image" content="./assets/open-graph/website.PNG">
+    <meta name="twitter:image" content="./assets/open-graph/website.jpg">
 
 
 
@@ -228,14 +228,19 @@
     </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/getYear.js"></script>
-    <script src="./js/contact.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/js/vendor/jquery-3.2.1.slim.min.js"></script>
+    <script src="/js/vendor/popper.min.js"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
 
+
+    <!-- Site JS -->
+    <script src="/js/common.js"></script>
+    <script src="/js/getYear.js"></script>
+    <script src="/js/contact.js"></script>
+
+    <!-- GA proxy beaconing -->
+    <script src="/js/vendor/axios.min.js"></script>
     <script>
         (function () {
             // Don't do GA beacon on preview branches

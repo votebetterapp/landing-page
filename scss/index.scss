@@ -38,7 +38,7 @@ body {
   color: white;
 
   /* The image used */
-  background-image: url('../assets/main-jumbo.png');
+  background-image: url('../assets/main-jumbo.jpg');
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -540,14 +540,6 @@ body {
   .image {
     margin: 0;
     padding: 0 !important;
-  }
-
-  // Adding vertical space to each footer section (ex. mailing list, social icons)
-  // only on mobile view, that way desktop view has them horizontal with no
-  // space on top, but mobile spaces them out vertically a bit
-  .vba-footer-section {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   // Adding vertical space to each "why join" point on mobile.
