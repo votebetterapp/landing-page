@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About - Vote Better App</title>
 
     <!-- META TAGS FOR SEO -->
-    <meta name="description"
-        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
+    <meta name="description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
     <meta name="keywords" content="vote, students, politics">
     <meta name="robots" content="NOINDEX,FOLLOW">
     <meta name="format-detection" content="telephone=no">
@@ -18,30 +18,22 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://votebetter.app/" />
     <meta property="og:image" content="./assets/open-graph/website.jpg" />
-    <meta property="og:description"
-        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change." />
+    <meta property="og:description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change." />
     <meta property="og:site_name" content="Vote Better App" />
-
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@publisher_handle">
     <meta name="twitter:title" content="Vote Better App">
-    <meta name="twitter:description"
-        content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
+    <meta name="twitter:description" content="VoteBetter - Our mission is to help students and student representatives alike navigate the landscape of student campus politics, form a collective voice on the issues they care about, and effectively organize for advocacy and change.">
     <meta name="keywords" content="vote, students, politics">
     <meta name="twitter:creator" content="@author_handle">
     <meta name="twitter:image" content="./assets/open-graph/website.jpg">
-
-
-
-    <title>Vote Better App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Bootstrap CSS and Site CSS -->
     <link rel="stylesheet" href="/css-vendor/bootstrap.min.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/about.css">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,7 +43,6 @@
 </head>
 
 <body>
-
     <nav class="navbar  navbar-expand-lg  fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -256,17 +247,15 @@
     </section>
     <!-- ./Footer -->
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS and Site JS -->
     <script src="/js/vendor/jquery-3.2.1.slim.min.js"></script>
     <script src="/js/vendor/popper.min.js"></script>
     <script src="/js/vendor/bootstrap.min.js"></script>
-
-    <!-- Site JS -->
     <script src="/js/common.js"></script>
-    <script src="/js/getYear.js"></script>
+    <script src="/js/getYear.js"></script>    
+    <script src="/js/vendor/axios.min.js"></script>
 
     <!-- GA proxy beaconing -->
-    <script src="/js/vendor/axios.min.js"></script>
     <script>
         (function () {
             // Don't do GA beacon on preview branches
@@ -313,8 +302,6 @@
             });
         })();
     </script>
-    <!-- /GA proxy beaconing -->
-    <!-- Scripts-->
 </body>
 
 </html>
