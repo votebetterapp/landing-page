@@ -165,6 +165,14 @@ nav button.navbar-toggler {
     .text-center-mobile {
         text-align: center;
     }
+
+     // Adding vertical space to each footer section (ex. mailing list, social icons)
+    // only on mobile view, that way desktop view has them horizontal with no
+    // space on top, but mobile spaces them out vertically a bit
+    .vba-footer-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 
