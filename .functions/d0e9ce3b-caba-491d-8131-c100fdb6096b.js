@@ -2,11 +2,21 @@ exports.handler = function (event, context, callback) {
     const https = require('https');
     const querystring = require('querystring');
 
+    const ipBlacklist = [
+        '108.162.163.103',
+        '209.171.88.61',
+    ];
+
     const body = JSON.parse(event.body);
 
     // Get IP from event included header
     const uip = event.headers['x-forwarded-for'];
     // console.info(`User IP from event headers: ${uip}`);
+
+    if (ipBlacklist.includes(uip)) {
+        console.info(`Skipping blacklisted IP: ${uip}`);
+        return;
+    }
 
     // Get other properties important for GA tracking from event body
     const cid = body.cid;
