@@ -3,8 +3,9 @@ exports.handler = function (event, context, callback) {
     const querystring = require('querystring');
 
     const ipBlacklist = [
-        '108.162.163.103',
-        '209.171.88.61',
+        '108.162.163.103', // Matt, Eldon home
+        '209.171.88.61', // Matt phone
+        '209.171.88.161', // Eldon phone
     ];
 
     const body = JSON.parse(event.body);
