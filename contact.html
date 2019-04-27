@@ -30,7 +30,7 @@
     <meta name="twitter:creator" content="@author_handle">
     <meta name="twitter:image" content="./assets/open-graph/website.jpg">    
     
-    <!-- Bootstrap CSS and Site CSS -->
+    <!-- Bootstrap CSS and Site CSS. Keep together to trigger automatic bundling by Netlify. -->
     <link rel="stylesheet" href="/css-vendor/bootstrap.min.css">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/contact.css">
@@ -227,7 +227,7 @@
     </section>
 
 
-    <!-- Bootstrap JS and Site JS -->
+    <!-- Bootstrap JS and Site JS. Keep together to trigger automatic bundling by Netlify. -->
     <script src="/js/vendor/jquery-3.2.1.slim.min.js"></script>
     <script src="/js/vendor/popper.min.js"></script>
     <script src="/js/vendor/bootstrap.min.js"></script>
@@ -235,56 +235,7 @@
     <script src="/js/getYear.js"></script>
     <script src="/js/contact.js"></script>
     <script src="/js/vendor/axios.min.js"></script>
-
-    <!-- GA proxy beaconing -->    
-    <script>
-        (function () {
-            // Don't do GA beacon on preview branches
-            if (window.location.hostname !== 'votebetter.app') {
-                return;
-            }
-
-            var gaProxyUrl = 'https://' + window.location.hostname + '/.netlify/functions/d0e9ce3b-caba-491d-8131-c100fdb6096b';
-
-            function uuid() {
-                var uuid = "",
-                    i, random;
-                for (i = 0; i < 32; i++) {
-                    random = Math.random() * 16 | 0;
-                    if (i == 8 || i == 12 || i == 16 || i == 20) {
-                        uuid += "-"
-                    }
-                    uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
-                }
-                return uuid;
-            }
-            // Anonymous user identification so GA tracks users and sessions properly
-            var cidKey = 'votebetter.app-cid';
-            var cid = localStorage.getItem(cidKey);
-            if (cid === null) {
-                cid = uuid();
-                localStorage.setItem(cidKey, cid);
-            }
-            document.addEventListener('DOMContentLoaded', function () {
-                console.info('Starting Google Analytics proxy request...');
-                axios.post(gaProxyUrl, {
-                        cid,
-                        dl: document.location.href,
-                        dr: document.referrer,
-                        ua: navigator.userAgent,
-                        sr: `${window.screen.width}x${window.screen.height}`,
-                        vp: `${window.innerWidth}x${window.innerHeight}`,
-                        ul: window.navigator.language,
-                    })
-                    .then(() => {
-                        console.info('...Google Analytics proxy request success.');
-                    })
-                    .catch(() => {
-                        console.error('...Google Analytics proxy request fail.');
-                    });
-            });
-        })();
-    </script>
+    <script src="/js/gaBeacon.js"></script>
 </body>
 
 </html>
