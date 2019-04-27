@@ -29,7 +29,18 @@ nav.navbar {
 .nav-scrolled {
     background-color: white !important;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
 
+// Apply to all navigation links
+a.nav-link {
+    font-size: 1.3rem;
+    text-align: center; // Does not interfere with desktop.
+}
+
+// Helps add some vertical space between the heading title
+// and the subtitle.
+p.lead {
+    margin-top: 0.5rem;
 }
 
 .mobile-logo {
