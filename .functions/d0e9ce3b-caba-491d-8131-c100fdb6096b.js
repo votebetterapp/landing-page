@@ -20,7 +20,7 @@ exports.handler = function (event, context, callback) {
     // skipped and return early from entire function.
     for (const ip of ipBlacklist) {
         if (ip[1] === uip) {
-            console.info(`Skipping blacklisted IP for ${ip[0]}: ${ip}`);
+            console.info(`Skipping blacklisted IP for ${ip[0]}: ${uip}`);
             return;
         }
     }
