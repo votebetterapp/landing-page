@@ -3,44 +3,38 @@ exports.handler = function (event, context, callback) {
     const querystring = require('querystring');
 
     const ipBlacklist = [
-        '108.162.163.103', // Matt, Eldon home
-        '209.171.88.61', // Matt phone
-        '209.171.88.161', // Eldon phone
+        ['Matt, Eldon home', '108.162.163.103'],
+        ['Matt phone', '209.171.88.61'],
+        ['Eldon phone', '209.171.88.161'],
+        ['Steph home', '72.141.60.55'],
+        ['Steph phone', '209.171.88.193'],
+        ['Steph work', '130.63.149.46'],
     ];
 
     const body = JSON.parse(event.body);
 
     // Get IP from event included header
     const uip = event.headers['x-forwarded-for'];
-    // console.info(`User IP from event headers: ${uip}`);
 
-    if (ipBlacklist.includes(uip)) {
-        console.info(`Skipping blacklisted IP: ${uip}`);
-        return;
+    // Iterate through IP blacklist. As soon as a match is found, log that it's
+    // skipped and return early from entire function.
+    for (const ip of ipBlacklist) {
+        if (ip[1] === uip) {
+            console.info(`Skipping blacklisted IP for ${ip[0]}: ${ip}`);
+            return;
+        }
     }
 
     // Get other properties important for GA tracking from event body
     const cid = body.cid;
-    // console.info(`Client ID from event body: ${cid}`);
-
     const dl = body.dl;
-    // console.info(`Document location URL from body: ${dl}`);
-
     const dr = body.dr;
-    // console.info(`Document referrer from body: ${dr}`);
-
     const ua = body.ua;
-    // console.info(`User Agent from body: ${ua}`);
-
     const sr = body.sr;
-    // console.info(`Screen Resolution from body: ${sr}`);
-
     const vp = body.vp;
-    // console.info(`Viewport size from body: ${vp}`);
-
     const ul = body.ul;
-    // console.info(`User Language from body: ${ul}`);
 
+    // Prepare the body of the request to be sent to Google Analytics
     const gaPayload = querystring.stringify({
         v: '1',
         tid: 'UA-137586657-1',
@@ -54,7 +48,7 @@ exports.handler = function (event, context, callback) {
         vp,
         ul,
     });
-    console.info(`ga payload: ${JSON.stringify(gaPayload)}`);
+    console.info(`GA payload: ${JSON.stringify(gaPayload)}`);
 
     const options = {
         hostname: 'www.google-analytics.com',
