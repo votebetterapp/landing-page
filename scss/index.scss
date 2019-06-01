@@ -43,13 +43,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
+  .button-group {
+    width: 100%;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 1em;
+  }
+
   .button-container {
     width: 100%;
     text-align: center;
-    padding-bottom: 1em;
-    padding-top: 4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 
     a {
+      width: 17em;
       font-size: 1.2em;
       font-weight: 500;
       padding: 0.755em 2em;
